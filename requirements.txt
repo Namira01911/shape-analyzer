@@ -1,7 +1,5 @@
-opencv-python-headless
+streamlit
 numpy
 pandas
-pytesseract
-streamlit
 Pillow
-streamlit
+opencv-python-headless
