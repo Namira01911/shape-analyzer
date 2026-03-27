@@ -3,10 +3,10 @@ import cv2
 import numpy as np
 from PIL import Image
 import pandas as pd
-import pytesseract
+#import pytesseract
 
 # Tesseract path
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+#pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 st.title("📐 Smart Shape Analyzer")
 
@@ -40,7 +40,7 @@ if uploaded_file is not None:
     for cnt in contours:
         area = cv2.contourArea(cnt)
 
-        # ❌ Ignore small contours (text)
+        #  Ignore small contours (text)
         if area < 2000:
             continue
 
@@ -51,7 +51,7 @@ if uploaded_file is not None:
 
         x, y, w, h = cv2.boundingRect(cnt)
 
-        # ❌ Ignore small width/height (text)
+        #  Ignore small width/height (text)
         if w < 40 or h < 40:
             continue
 
@@ -109,7 +109,7 @@ if uploaded_file is not None:
         st.warning("No valid shapes detected (text is ignored).")
 
     # =========================
-    # 📝 OCR (CLEAR OUTPUT)
+    #  OCR (CLEAR OUTPUT)
     # =========================
 
     st.subheader("📝 Extracted Text")

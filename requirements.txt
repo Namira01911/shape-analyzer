@@ -4,3 +4,4 @@ pandas
 pytesseract
 streamlit
 Pillow
+streamlit
